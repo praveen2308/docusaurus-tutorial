@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ShopIQ Analytics for Browser · </title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Tracking visitor analytics and behaviour is essential in order to provide accurate and visitor-specific reports and insights. ShopIQ analyzes visitor events, such as product clicks, products added to cart, orders, etc. These events are tracked using browser cookies. With this information, a profile is built for every visitor, based on his/her affinity to different categories, brands, or prices."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ShopIQ Analytics for Browser · "/><meta property="og:type" content="website"/><meta property="og:url" content="https://praveen2308.github.io/docusaurus-tutorial/"/><meta property="og:description" content="Tracking visitor analytics and behaviour is essential in order to provide accurate and visitor-specific reports and insights. ShopIQ analyzes visitor events, such as product clicks, products added to cart, orders, etc. These events are tracked using browser cookies. With this information, a profile is built for every visitor, based on his/her affinity to different categories, brands, or prices."/><meta property="og:image" content="https://praveen2308.github.io/docusaurus-tutorial/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://praveen2308.github.io/docusaurus-tutorial/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/docusaurus-tutorial/img/favicon-iqlect.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://docusaurus.io/js/code-blocks-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/docusaurus-tutorial/js/scrollSpy.js"></script><link rel="stylesheet" href="/docusaurus-tutorial/css/main.css"/><script src="/docusaurus-tutorial/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docusaurus-tutorial/"><img class="logo" src="/docusaurus-tutorial/img/iqlect-logo.png" alt=""/><h2 class="headerTitleWithLogo"></h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docusaurus-tutorial/docs/labs/lab1" target="_self">Labs</a></li><li class="siteNavGroupActive"><a href="/docusaurus-tutorial/docs/installation/system" target="_self">Installation</a></li><li class="siteNavGroupActive"><a href="/docusaurus-tutorial/docs/integration/apps" target="_self">Integration</a></li><li class=""><a href="/docusaurus-tutorial/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>ShopIQ</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Installation</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/installation/system">System Requirements</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Integration</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/integration/apps">App Store</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">ShopIQ</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docusaurus-tutorial/docs/integration/shopIQ_browser">Analytics Integration - Browser</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/integration/shopIQ_gtm">Analytics Integration - GTM</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/integration/shopIQ_sdk">Analytics Integration - Android</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/integration/shopIQ_csv_upload">Upload Files</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/integration/shopIQ_BulkEmail">SendGrid Integration</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/integration/shopIQ_SalesForce">SalesForce Integration</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Labs</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/labs/lab1">App and Stream Creation</a></li><li class="navListItem"><a class="navItem" href="/docusaurus-tutorial/docs/labs/lab2">Pushing Data to stream</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">ShopIQ Analytics for Browser</h1></header><article><div><span><p>Tracking visitor analytics and behaviour is essential in order to provide accurate and visitor-specific reports and insights. ShopIQ analyzes visitor events, such as product clicks, products added to cart, orders, etc. These events are tracked using browser cookies. With this information, a profile is built for every visitor, based on his/her affinity to different categories, brands, or prices.</p>
+<p>This clickstream data is also used to determine the effectiveness of the site as a channel-to-market. It also takes into account with what pages the customer lingers on, the products that a customer is most likely to purchase or is abandoning, whether or not the customer belongs to a ​loyalty program​ and uses a coupon code and their preferred mode of payment, etc.</p>
+<h2><a class="anchor" aria-hidden="true" id="how-to-integrate"></a><a href="#how-to-integrate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Integrate?</h2>
+<p>Types of Analytics Integration:</p>
+<ul>
+<li>Browser-based Analytics Integration</li>
+<li>REST API-based Analytics Integration (<em>Comming Soon</em>)</li>
+</ul>
+<p>We do recommend that the customer follow Browser-based Analytics Integration, where in customer does the integration by including ShopIQ javascript library. ShopIQ javascript library performs all the operations without the customer investing integration effort. But in case of mobile SDK, Amazon Alexa or any kind of non-browser based ShopIQ integration, customers have to use RESTful API-based analytics integration.</p>
+<p>The conventional way to integrating ShopIQ Analytics is a simple two-step process:</p>
+<ol>
+<li>Inserting a JavaScript code.</li>
+<li>Tracking events.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="1-inserting-the-javascript-code"></a><a href="#1-inserting-the-javascript-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Inserting the JavaScript Code</h2>
+<p>Your first step is to insert a JavaScript code within all the HTML pages in your website. This JavaScript code is responsible for pushing the visitor events to ShopIQ.</p>
+<p>Notes:</p>
+<ul>
+<li>The JavaScript code will not affect the performance of the page as it is loaded asynchronously.</li>
+<li>This code could be inserted anywhere in the page (header, body, footer) and need not be included in the head section of the HTML.</li>
+</ul>
+<p><img src="/docusaurus-tutorial/docs/assets/shopIQ_js.png" alt="IQLECT js Library"></p>
+<p>Once you login to the platform you can go to the &quot;App Settings&quot; section from the left hand sidebar. After that just click on the JS section you will see a script. Which needs to be added to your website.</p>
+<p>Sample Script :</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-string">&lt;script</span> <span class="hljs-string">type="text/javascript"</span> <span class="hljs-string">src="https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/lrgvv9ratlcw/b/iqlect-send-client/o/js-clients/tags/tENSFY7tAAAA.js"&gt;&lt;/script&gt;</span>
+<span class="hljs-string">&lt;script</span> <span class="hljs-string">type="text/javascript"&gt;</span>
+  <span class="hljs-string">var</span> <span class="hljs-string">_iqparams</span> <span class="hljs-string">=</span> <span class="hljs-string">_iqparams</span> <span class="hljs-string">||</span> <span class="hljs-string">{};</span>
+  <span class="hljs-string">var</span> <span class="hljs-string">_iqexparams</span> <span class="hljs-string">=</span> <span class="hljs-string">_iqexparams</span> <span class="hljs-string">||</span> <span class="hljs-string">{};</span>
+  <span class="hljs-string">var</span> <span class="hljs-string">_iqevents</span> <span class="hljs-string">=</span> <span class="hljs-string">_iqevents</span> <span class="hljs-string">||</span> <span class="hljs-string">[];</span>
+  <span class="hljs-string">(function()</span> <span class="hljs-string">{</span>
+    <span class="hljs-string">var</span> <span class="hljs-string">u="http://130.61.29.96:8080/";</span>
+    <span class="hljs-string">var</span> <span class="hljs-string">s3_u="https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/lrgvv9ratlcw/b/ShopIQ-send-client/o/js-clients/v3/";</span>
+    <span class="hljs-string">_iqparams.endpoint</span> <span class="hljs-string">=</span> <span class="hljs-string">u+'iqtracker';</span>
+    <span class="hljs-string">_iqparams['streams']</span> <span class="hljs-string">=</span> <span class="hljs-string">{PRODUCT:</span> <span class="hljs-string">"product_ENSFY7tAAAA"</span><span class="hljs-string">,CUSTOMERS:</span> <span class="hljs-string">"customers_ENSFY7tAAAA"</span><span class="hljs-string">,PAGE_EVENTS:</span> <span class="hljs-string">"page_events_ENSFY7tAAAA"</span><span class="hljs-string">,ORDERS:</span> <span class="hljs-string">"orders_ENSFY7tAAAA"</span><span class="hljs-string">,PRODUCT_VIEWED:</span> <span class="hljs-string">"product_viewed_ENSFY7tAAAA"</span><span class="hljs-string">,VISITOR:</span> <span class="hljs-string">"visitor_ENSFY7tAAAA"</span><span class="hljs-string">,ORDER_PRODUCT_DETAILS:</span> <span class="hljs-string">"order_product_details_ENSFY7tAAAA"</span><span class="hljs-string">};</span>
+    <span class="hljs-string">_iqparams['accountId']</span> <span class="hljs-string">=</span> <span class="hljs-string">'EKXSvvLAAAE'</span><span class="hljs-string">;</span>
+    <span class="hljs-string">_iqparams['schema-name']</span> <span class="hljs-string">=</span> <span class="hljs-string">'GlobalSchema_EKXSvvLAAAE'</span><span class="hljs-string">;</span>
+    <span class="hljs-string">_iqparams['stream-name']</span> <span class="hljs-string">=</span> <span class="hljs-string">'product_ENSFY7tAAAA'</span><span class="hljs-string">;</span>
+    <span class="hljs-string">var</span> <span class="hljs-string">d=document,</span> <span class="hljs-string">g=d.createElement('script'),</span> <span class="hljs-string">s=d.getElementsByTagName('script')[0];</span>
+    <span class="hljs-string">g.type='text/javascript';</span> <span class="hljs-string">g.async=true;</span> <span class="hljs-string">g.defer=true;</span> <span class="hljs-string">g.src=s3_u+'ShopIQ.min.js';</span> <span class="hljs-string">s.parentNode.insertBefore(g,s);</span>
+  <span class="hljs-string">})();</span>
+<span class="hljs-string">&lt;/script&gt;</span>
+<span class="hljs-string">&lt;noscript&gt;&lt;p&gt;&lt;img</span> <span class="hljs-string">src="https://csuccessportal.ShopIQ.com/iqtracker?idsite="</span> <span class="hljs-string">style="border:0;"</span> <span class="hljs-string">alt=""</span> <span class="hljs-string">/&gt;&lt;/p&gt;&lt;/noscript&gt;</span>
+</code></pre>
+<p>This JavaScript snippet automatically:</p>
+<ul>
+<li>Tracks new visitors and makes their profiles (files) using browser cookies. This information is stored within the browser cookie having the name ‘ShopIQ.sessionId’ .</li>
+<li>Tracks and pushes the events to ShopIQ.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-tracking-events"></a><a href="#2-tracking-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Tracking events.</h2>
+<p>The actions a visitor takes on your ecommerce store are known as Events. Please follow the below steps for analysis to take place without any issues. There are few parameters which are not mandatory, so in case, you don’t have them then that can be left blank.</p>
+<p>Events :</p>
+<ol>
+<li>Page Type</li>
+<li>Product Details</li>
+<li>Add to cart</li>
+<li>Checkout</li>
+<li>Orders</li>
+<li>Custom Events</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="1-page-type"></a><a href="#1-page-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Page Type</h3>
+<p>We need to set pageType variable in all pages, depending on the page type.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-1-tab-2" class="nav-link active" data-group="group_1" data-tab="tab-group-1-content-2">JavaScript</div></div><div class="tab-content"><div id="tab-group-1-content-2" class="tab-pane active" data-group="group_1" tabindex="-1"><div><span><pre><code class="hljs css language-js">_iqexparams.pageType = <span class="hljs-string">"&lt;PAGE TYPE&gt;"</span>;<br /></code></pre>
+</span></div></div></div></div>
+<p><strong><code>&lt;PAGE TYPE&gt;</code></strong>: This could be any of the below mentioned values. The pageType variable is based on the current page.
+Just assign the values to this variable based on the page the customer is on.</p>
+<p>Different Types of <strong>PageTypes</strong></p>
+<table>
+<thead>
+<tr><th>Ecommerce Page</th><th style="text-align:center">PageType Value</th></tr>
+</thead>
+<tbody>
+<tr><td>Home Page</td><td style="text-align:center">home</td></tr>
+<tr><td>Product Listing Page</td><td style="text-align:center">listing</td></tr>
+<tr><td>Product Description Page</td><td style="text-align:center">productpage</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="2-product-details"></a><a href="#2-product-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Product Details</h3>
+<p>The below code should be added on all product details pages. And in your js code make sure the below values are passed correctly.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-3-tab-4" class="nav-link active" data-group="group_3" data-tab="tab-group-3-content-4">JavaScript</div></div><div class="tab-content"><div id="tab-group-3-content-4" class="tab-pane active" data-group="group_3" tabindex="-1"><div><span><pre><code class="hljs css language-js">_iqexparams.product_id = <span class="hljs-string">"&lt;PRODUCT ID&gt;"</span>; <br />_iqexparams.product_name = <span class="hljs-string">"&lt;PRODUCT NAME&gt;"</span>; <br />_iqexparams.brand_name = <span class="hljs-string">"&lt;BRAND&gt;"</span>; <br />_iqexparams.category = <span class="hljs-string">"&lt;CATEGORY&gt;"</span>; <br />_iqexparams.price_per_unit = <span class="hljs-string">"&lt;PRICE&gt;"</span>;<br /></code></pre>
+</span></div></div></div></div>
+<p>The values that needs to be passed :</p>
+<p><strong><code>&lt;PRODUCT ID&gt;</code></strong>: This would be the productId of the product. It should be unique across the whole catalog.
+<strong><code>&lt;PRODUCT NAME&gt;</code></strong>: Title of the product.<br>
+<strong><code>&lt;BRAND&gt;</code></strong>: The name of the brand this product is associated with.<br>
+<strong><code>&lt;CATEGORY&gt;</code></strong>: The category this product is associated with. It would be the primary Category Name. The same name should be part of the catalog CSV uplodaed to the platform.<br>
+<strong><code>&lt;PRICE&gt;</code></strong>: The selling price per unit of this product.</p>
+<h3><a class="anchor" aria-hidden="true" id="3-add-to-cart"></a><a href="#3-add-to-cart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Add To Cart</h3>
+<p>The below code should be executed when a user clicks on &quot;Add To Cart&quot; button. Here, you can
+call the ShopIQ method to send ‘cart information’.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-5-tab-6" class="nav-link active" data-group="group_5" data-tab="tab-group-5-content-6">JavaScript</div></div><div class="tab-content"><div id="tab-group-5-content-6" class="tab-pane active" data-group="group_5" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> cartObj = { <br />      <span class="hljs-attr">customer_id</span>: <span class="hljs-string">'&lt;CUSTOMER ID&gt;'</span>,<br />      <span class="hljs-attr">cart_token</span>: <span class="hljs-string">'&lt;CART TOKEN&gt;'</span>, <br />      <span class="hljs-attr">discount_code</span>: <span class="hljs-string">'&lt;DISCOUNT CODE&gt;'</span>, <br />      <span class="hljs-attr">shipping_charges</span>: &lt;SHIPPING CHARGES&gt;, <br />      products:[<br />          {<br />            product_id: '&lt;PRODUCT ID&gt;'<br />            price: &lt;PRICE&gt;, <br />            discount: &lt;DISCOUNT VALUE&gt;, <br />            quantity: &lt;QUANTITY&gt;<br />          }, <br />          {<br />            // 2nd Product Details<br />          } <br />      ],<br />      total_items_price: &lt;TOTAL PRICE&gt;, <br />      subtotal_price: &lt;SUB TOTAL PRICE&gt;, <br />      total_price: &lt;TOTAL PRICE&gt;, <br />      total_discount: &lt;TOTAL DISCOUNT&gt;, <br />} <br />ShopIQ.add_to_cart(cartObj);<br /></code></pre>
+</span></div></div></div></div>
+<p><strong><code>&lt;CUSTOMER ID&gt;</code></strong>: The unique ID to identify customer. This ID should be similar to the ID uploaded in the customer CSV uploaded to the platform. empty in case not logged in. And in case user has logged in please pass the userId.<br>
+<strong><code>&lt;CART TOKEN&gt;</code></strong>: The unique cart token generated by your platform.<br>
+<strong><code>&lt;DISCOUNT CODE&gt;</code></strong>: In case a discount code was offered for this product. If not you can send empty value as well.<br>
+<strong><code>&lt;SHIPPING CHARGES&gt;</code></strong>: The Shipping Charges applied for this product.<br>
+<strong><code>&lt;TOTAL PRICE&gt;</code></strong>: The total price value of the cart. Price of the product * Quantity - discount price (After
+removing discount).<br>
+<strong><code>&lt;SUB TOTAL PRICE&gt;</code></strong>: The sub total price value of the cart.<br>
+<strong><code>&lt;QUANTITY&gt;</code></strong>: Quantity for each product.<br>
+<strong><code>&lt;DISCOUNT VALUE&gt;</code></strong>: Discount value for each product.<br>
+<strong><code>&lt;PRICE&gt;</code></strong>: Final selling price for including quantity, price per product and discount for each product.<br>
+<strong><code>&lt;TOTAL DISCOUNT&gt;</code></strong>: Discount for each product * Quantity.</p>
+<h3><a class="anchor" aria-hidden="true" id="4-checkout"></a><a href="#4-checkout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Checkout</h3>
+<p>After clicking on checkout/proceed to checkout button, user will land on checkout page. Here, we need to call checkout method(which will send the cart information). To send the checkout event, we need to follow the event similar to “add to cart”, only the method name changes as mentioned below.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-7-tab-8" class="nav-link active" data-group="group_7" data-tab="tab-group-7-content-8">JavaScript</div></div><div class="tab-content"><div id="tab-group-7-content-8" class="tab-pane active" data-group="group_7" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> ​checkoutObj​ = {<br />      <span class="hljs-attr">customer_id</span>: <span class="hljs-string">'&lt;CUSTOMER ID&gt;'</span>,<br />      <span class="hljs-attr">cart_token</span>: <span class="hljs-string">'&lt;CART TOKEN&gt;'</span>, <br />      <span class="hljs-attr">total_items_price</span>: &lt;TOTAL PRICE&gt;, <br />      subtotal_price: &lt;SUB TOTAL PRICE&gt;, <br />      total_price: &lt;TOTAL PRICE&gt;, <br />      total_discount: &lt;TOTAL DISCOUNT&gt;, <br />      discount_code: '&lt;DISCOUNT CODE&gt;', <br />      products :[<br />            {<br />              product_id: '&lt;PRODUCT ID&gt;'<br />              price: &lt;PRICE&gt;, <br />              discount: &lt;DISCOUNT VALUE&gt;, <br />              quantity: &lt;QUANTITY&gt;<br />            }, <br />            {<br />              product_id: '&lt;PRODUCT ID&gt;'<br />              price: &lt;PRICE&gt;, <br />              discount: &lt;DISCOUNT VALUE&gt;, <br />              quantity: &lt;QUANTITY&gt;<br />            } <br />        ]<br />} <br />ShopIQ.checkout(​checkoutObj​);<br /></code></pre>
+</span></div></div></div></div>
+<p><strong><code>&lt;CUSTOMER ID&gt;</code></strong>: The unique ID to identify customer. This ID should be similar to the ID uploaded in the customer CSV uploaded to the platform. empty in case not logged in. And in case user has logged in please pass the userId.<br>
+<strong><code>&lt;CART TOKEN&gt;</code></strong>: The unique cart token generated by your platform.<br>
+<strong><code>&lt;DISCOUNT CODE&gt;</code></strong>: In case a discount code was offered for this product. If not you can send empty value as well.<br>
+<strong><code>&lt;SHIPPING CHARGES&gt;</code></strong>: The Shipping Charges applied for this product.<br>
+<strong><code>&lt;TOTAL PRICE&gt;</code></strong>: The total price value of the cart. Price of the product * Quantity - discount price (After
+removing discount).<br>
+<strong><code>&lt;SUB TOTAL PRICE&gt;</code></strong>: The sub total price value of the cart. //--- Need info ----//
+<strong><code>&lt;QUANTITY&gt;</code></strong>: Total quantity for each product.<br>
+<strong><code>&lt;DISCOUNT VALUE&gt;</code></strong>: Discount value for each product.<br>
+<strong><code>&lt;PRICE&gt;</code></strong>: Final selling price for including quantity, price per product and discount for each product.<br>
+<strong><code>&lt;TOTAL DISCOUNT&gt;</code></strong>: Discount for each product * Quantity.</p>
+<h3><a class="anchor" aria-hidden="true" id="5-order"></a><a href="#5-order" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Order</h3>
+<p>After completing the payment and a successful order, we need to send order details to ShopIQ using ​ShopIQ.order_placed(orderObj)​. This method needs to be called only once. If you call the method on refresh of order success page, it will make one more entry in ShopIQ db and then it will be twice the same order.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-9-tab-10" class="nav-link active" data-group="group_9" data-tab="tab-group-9-content-10">JavaScript</div></div><div class="tab-content"><div id="tab-group-9-content-10" class="tab-pane active" data-group="group_9" tabindex="-1"><div><span><pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> orderObj = { <br />      <span class="hljs-attr">customer_id</span>: <span class="hljs-string">'&lt;CUSTOMER ID&gt;'</span>,<br />      <span class="hljs-attr">cart_token</span>: <span class="hljs-string">'&lt;CART TOKEN&gt;'</span>, <br />      <span class="hljs-attr">order_id</span>:<span class="hljs-string">'&lt;ORDER ID&gt;'</span>, <br />      <span class="hljs-attr">email</span>: <span class="hljs-string">'&lt;CUSTOMER EMAIL ID&gt;'</span>, <br />      <span class="hljs-attr">billing_city</span>: <span class="hljs-string">'&lt;CUSTOMER BILLING CITY&gt;'</span>, <br />      <span class="hljs-attr">billing_country</span>: <span class="hljs-string">'&lt;CUSTOMER BILLING COUNTRY&gt;'</span>, <br />      <span class="hljs-attr">billing_state</span>: <span class="hljs-string">'&lt;CUSTOMER BILLING STATE&gt;'</span>, <br />      <span class="hljs-attr">billing_postcode</span>: &lt;CUSTOMER BILLING POSTAL CODE&gt;, <br />      shipping_city: '&lt;CUSTOMER SHIPPING CITY NAME&gt;', <br />      shipping_country:  '&lt;CUSTOMER SHIPPING COUNTRY&gt;', <br />      shipping_state: '&lt;CUSTOMER SHIPPING STATE&gt;', <br />      shipping_postcode: &lt;CUSTOMER SHIPPING POSTAL CODE&gt;, <br />      payment_method: '&lt;PAYMENT METHOD&gt;', <br />      gateway: '&lt;PAYMENT GATEWAY&gt;', <br />      currency_code: '&lt;CURRENCY CODE&gt;', <br />      total_items_price: &lt;TOTAL ITEM PRICE&gt;, <br />      subtotal_price: &lt;SUB TOTAL PRICE&gt;, <br />      total_price: &lt;TOTAL PRICE&gt;, <br />      discount_code: '&lt;DISCOUNT CODE&gt;', <br />      total_discount: &lt;TOTAL DISCOUNT&gt;, <br />      shipping_charges: &lt;SHIPPING CHARGES&gt;, <br />      products:[ <br />          {<br />              product_id: '&lt;PRODUCT ID&gt;'<br />              price: &lt;PRICE&gt;, <br />              discount: &lt;DISCOUNT VALUE&gt;, <br />              quantity: &lt;QUANTITY&gt;<br />        },<br />        {<br />              product_id: '&lt;PRODUCT ID&gt;'<br />              price: &lt;PRICE&gt;, <br />              discount: &lt;DISCOUNT VALUE&gt;, <br />              quantity: &lt;QUANTITY&gt;<br />        }<br />    ]<br />} <br />ShopIQ.order_placed(orderObj);<br /></code></pre>
+</span></div></div></div></div>
+<p><strong><code>&lt;CUSTOMER ID&gt;</code></strong>: The unique ID to identify customer. This ID should be similar to the ID uploaded in the customer CSV uploaded to the platform. empty in case not logged in. And in case user has logged in please pass the userId.<br>
+<strong><code>&lt;CART TOKEN&gt;</code></strong>: The unique cart token generated by your platform.<br>
+<strong><code>&lt;ORDER ID&gt;</code></strong>: The unique order ID generated by the store.<br>
+<strong><code>&lt;CUSTOMER EMAIL ID&gt;</code></strong>: The unique emailId used by customer to create an account in the store.<br>
+<strong><code>&lt;CUSTOMER BILLING CITY&gt;</code></strong>: The name of the city from where the customer is making the order.<br>
+<strong><code>&lt;CUSTOMER BILLING STATE&gt;</code></strong>: The name of the state from where the customer is making the order.<br>
+<strong><code>&lt;CUSTOMER BILLING COUNTRY&gt;</code></strong>: The name of the country from where the customer is making the order.<br>
+<strong><code>&lt;CUSTOMER SHIPPING CITY&gt;</code></strong>: The name of the city from where the customer is making the order.<br>
+<strong><code>&lt;CUSTOMER SHIPPING STATE&gt;</code></strong>: The name of the state from where the customer is making the order.<br>
+<strong><code>&lt;CUSTOMER SHIPPING COUNTRY&gt;</code></strong>: The name of the city from where the customer is making the order.<br>
+<strong><code>&lt;PAYMENT METHOD&gt;</code></strong>: The payment method used for making this order. Eg. Net Banking, Credit Card etc.<br>
+<strong><code>&lt;PAYMENT GATEWAY&gt;</code></strong>: The payment gateway used for billing. Eg. Paypal, Paytm etc.<br>
+<strong><code>&lt;CURRENCY CODE&gt;</code></strong>: The currency code used for billing. Eg. INR for Indian Ruppes, USD for US Dollars etc.
+<strong><code>&lt;DISCOUNT CODE&gt;</code></strong>: In case a discount code was offered for this product. If not you can send empty value as well.<br>
+<strong><code>&lt;SHIPPING CHARGES&gt;</code></strong>: The Shipping Charges applied for this product.<br>
+<strong><code>&lt;TOTAL PRICE&gt;</code></strong>: The total price value of the cart. Price of the product * Quantity - discount price (After
+removing discount).<br>
+<strong><code>&lt;SUB TOTAL PRICE&gt;</code></strong>: The sub total price value of the cart. //--- Need info ----//<br>
+<strong><code>&lt;QUANTITY&gt;</code></strong>: Total quantity for each product.<br>
+<strong><code>&lt;DISCOUNT VALUE&gt;</code></strong>: Discount value for each product.<br>
+<strong><code>&lt;PRICE&gt;</code></strong>: Final selling price for including quantity, price per product and discount for each product.<br>
+<strong><code>&lt;TOTAL DISCOUNT&gt;</code></strong>: Discount for each product * Quantity.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docusaurus-tutorial/docs/integration/apps"><span class="arrow-prev">← </span><span>App Store</span></a><a class="docs-next button" href="/docusaurus-tutorial/docs/integration/shopIQ_gtm"><span>Analytics Integration - GTM</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-integrate">How to Integrate?</a></li><li><a href="#1-inserting-the-javascript-code">1. Inserting the JavaScript Code</a></li><li><a href="#2-tracking-events">2. Tracking events.</a><ul class="toc-headings"><li><a href="#1-page-type">1. Page Type</a></li><li><a href="#2-product-details">2. Product Details</a></li><li><a href="#3-add-to-cart">3. Add To Cart</a></li><li><a href="#4-checkout">4. Checkout</a></li><li><a href="#5-order">5. Order</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docusaurus-tutorial/" class="nav-home"><img src="/docusaurus-tutorial/img/favicon-iqlect.png" alt="" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docusaurus-tutorial/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docusaurus-tutorial/docs/en/doc2.html">Guides (or other categories)</a><a href="/docusaurus-tutorial/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/docusaurus-tutorial/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/docusaurus-tutorial/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 IQLECT Software Solutiions Private Limited</section></footer></div></body></html>
